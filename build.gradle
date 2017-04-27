@@ -1,0 +1,20 @@
+group 'AppiumExample'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    def JUNIT_VERSION = '4.11'
+    def JAVA_CLIENT_VERSION = '4.1.2'
+    def SELENIUM_VERSION = '2.53.1'
+
+    testCompile (
+            'junit:junit:' + JUNIT_VERSION,
+            'io.appium:java-client:' + JAVA_CLIENT_VERSION,
+            'org.seleniumhq.selenium:selenium-java:' + SELENIUM_VERSION
+    )
+}
